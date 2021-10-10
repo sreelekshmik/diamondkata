@@ -11,12 +11,18 @@ public class DiamondKataGenerator {
 		int noOfLines = (c-'a') * 2 + 1;
 		List<String> rows = new ArrayList<>(noOfLines/2);
 		List<String> diamondRows = new ArrayList<>(noOfLines);
-		for (int i = 0; i < noOfLines/2; i++) {
+		for (int i = 0; i <= noOfLines/2; i++) {
 			rows.add(generateRow(i, noOfLines));
 		}
 		
 		rows.forEach(System.out::println);
-		return rows;
+		
+		  diamondRows.addAll(rows); 
+		  rows.remove(rows.size() -1);
+		  Collections.reverse(rows);
+		  diamondRows.addAll(rows);
+		  diamondRows.forEach(System.out::println);
+		return diamondRows;
 	}
 	
 	public String generateRow(int rowNo, int rowLen) {
