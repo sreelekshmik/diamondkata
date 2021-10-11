@@ -15,13 +15,11 @@ public class DiamondKataGenerator {
 			rows.add(generateRow(i, noOfLines));
 		}
 		
-		rows.forEach(System.out::println);
-		
-		  diamondRows.addAll(rows); 
-		  rows.remove(rows.size() -1);
-		  Collections.reverse(rows);
-		  diamondRows.addAll(rows);
-		  diamondRows.forEach(System.out::println);
+		diamondRows.addAll(rows); 
+		rows.remove(rows.size() -1);
+		Collections.reverse(rows);
+		diamondRows.addAll(rows);
+		diamondRows.forEach(System.out::println);
 		return diamondRows;
 	}
 	
@@ -29,7 +27,7 @@ public class DiamondKataGenerator {
 		char[] row = new char[rowLen];
 		Arrays.fill(row,' ');
 		int charPos = rowLen/2;
-		char character = (char) ('a' + charPos);
+		char character = (char) ('a' + rowNo);
 		if(rowNo == 0) {
 			row[charPos] = 'a';
 		} else if (rowNo < rowLen) {
