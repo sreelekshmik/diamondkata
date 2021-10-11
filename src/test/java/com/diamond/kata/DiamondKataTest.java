@@ -1,6 +1,7 @@
 package com.diamond.kata;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 import java.util.List;
@@ -60,13 +61,13 @@ public class DiamondKataTest
     public void shouldbeABCD()
     {
       List<String> expectedDiamond = Arrays.asList(
-    		  "   a   ",
-    		  "  b b  ",
-    		  " c   c ",
-    		  "d     d",
-    		  " c   c ",
-    		  "  b b  ",
-    		  "   a   ");
+    		  "   A   ",
+    		  "  B B  ",
+    		  " C   C ",
+    		  "D     D",
+    		  " C   C ",
+    		  "  B B  ",
+    		  "   A   ");
       
      assertArrayEquals(expectedDiamond.toArray(), DiamondKata.printDiamondKata('d').toArray());
       	
@@ -90,7 +91,13 @@ public class DiamondKataTest
     		  "     a     ");
       
      assertArrayEquals(expectedDiamond.toArray(), DiamondKata.printDiamondKata('f').toArray());
-      	
-       
     }
+    
+    @Test
+    public void shouldReturnNull()
+    {
+    	assertEquals(null, DiamondKata.printDiamondKata('*'));
+    }
+    
+    
 }
