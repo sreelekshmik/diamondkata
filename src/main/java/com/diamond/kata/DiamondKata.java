@@ -2,6 +2,7 @@ package com.diamond.kata;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * DiamondKata
@@ -16,6 +17,5 @@ public class DiamondKata
 		rows  = diamondKataGenerator.printDiamond(c);
 		return rows;
 	}
-	
-   
+  
 }
