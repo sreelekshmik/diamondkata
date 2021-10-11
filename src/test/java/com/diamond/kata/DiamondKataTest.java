@@ -16,10 +16,10 @@ import org.junit.Test;
 public class DiamondKataTest 
 {
     /**
-     * Rigorous Test :-)
+     * Rigorous Test
      */
     @Test
-    public void shouldbeA()
+    public void shouldReturnA()
     {
       List<String> expectedDiamond = Arrays.asList("a");
       
@@ -30,7 +30,7 @@ public class DiamondKataTest
     
     
     @Test
-    public void shouldbeAB()
+    public void shouldReturnAB()
     {
       List<String> expectedDiamond = Arrays.asList(
     		  " a ",
@@ -43,7 +43,7 @@ public class DiamondKataTest
     }
     
     @Test
-    public void shouldbeABC()
+    public void shouldReturnABC()
     {
       List<String> expectedDiamond = Arrays.asList(
     		  "  a  ",
@@ -51,14 +51,11 @@ public class DiamondKataTest
     		  "c   c",
     		  " b b ",
     		  "  a  ");
-      
      assertArrayEquals(expectedDiamond.toArray(), DiamondKata.printDiamondKata('c').toArray());
-      	
-       
     }
     
     @Test
-    public void shouldbeABCD()
+    public void shouldReturnABCD()
     {
       List<String> expectedDiamond = Arrays.asList(
     		  "   A   ",
@@ -69,13 +66,11 @@ public class DiamondKataTest
     		  "  B B  ",
     		  "   A   ");
       
-     assertArrayEquals(expectedDiamond.toArray(), DiamondKata.printDiamondKata('d').toArray());
-      	
-       
-    }
+     assertArrayEquals(expectedDiamond.toArray(), DiamondKata.printDiamondKata('D').toArray());
+   }
     
     @Test
-    public void shouldbeABCDEF()
+    public void shouldReturnABCDEF()
     {
       List<String> expectedDiamond = Arrays.asList(
     		  "     a     ",
@@ -98,6 +93,5 @@ public class DiamondKataTest
     {
     	assertEquals(null, DiamondKata.printDiamondKata('*'));
     }
-    
-    
+     
 }
